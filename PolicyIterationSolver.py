@@ -1,5 +1,3 @@
-from mdptoolbox.mdp import PolicyIteration
-
 import TestTakingMDP
 import TicTacToeMDP
 
