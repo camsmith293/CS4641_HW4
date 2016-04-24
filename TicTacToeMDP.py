@@ -1,3 +1,6 @@
+import numpy as np
+from scipy.sparse import dok_matrix
+
 from mdptoolbox import mdp
 
 ACTIONS = 9
