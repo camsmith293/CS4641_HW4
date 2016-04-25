@@ -15,8 +15,6 @@ def solve_test_taking():
     for index in range(len(TestTakingMDP.STATES)):
         print("%s: %s" % (TestTakingMDP.STATES[index], TestTakingMDP.ACTIONS[test_taking.policy[index]]))
 
-
-
     print("Time: %d" % time)
 
     val = 0
@@ -33,7 +31,7 @@ def solve_tictactoe():
 
     val = 0
     for i in range(TicTacToeMDP.STATES):
-        # print("State %s: %d" % (str(TicTacToeMDP.convertIndexToTuple(i)), tictactoe.V[i]))
+        print("State %s: %s" % (str(TicTacToeMDP.convertIndexToTuple(i)), tictactoe.policy(i)))
         val += tictactoe.V[i]
 
     print("Value: %d" % val)
