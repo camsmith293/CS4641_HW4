@@ -8,7 +8,9 @@ tictactoe = TicTacToeMDP.wrap_to_PI_MDP()
 
 def solve_test_taking():
     time = _time.time()
+    print(time)
     test_taking.run()
+    print(_time.time())
     time = _time.time() - time
     for index in range(len(TestTakingMDP.STATES)):
         print("%s: %s" % (TestTakingMDP.STATES[index], TestTakingMDP.ACTIONS[test_taking.policy[index]]))
