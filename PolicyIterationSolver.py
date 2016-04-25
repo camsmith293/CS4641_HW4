@@ -25,7 +25,7 @@ def solve_tictactoe():
 
     val = 0
     for i in range(TicTacToeMDP.STATES):
-        print("State %s: %d" % (str(TicTacToeMDP.convertIndexToTuple(i)), test_taking.V[i]))
+        print("State %s: %d" % (str(TicTacToeMDP.convertIndexToTuple(i)), tictactoe.V[i]))
         val += tictactoe.V[i]
 
     print("Value: %d" % val)
