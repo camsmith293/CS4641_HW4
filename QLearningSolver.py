@@ -1,8 +1,8 @@
 import TestTakingMDP
 import TicTacToeMDP
 
-test_taking = TestTakingMDP.wrap_to_PI_MDP()
-tictactoe = TicTacToeMDP.wrap_to_PI_MDP()
+test_taking = TestTakingMDP.wrap_to_QL_MDP()
+tictactoe = TicTacToeMDP.wrap_to_QL_MDP()
 
 def solve_test_taking():
     test_taking.run()

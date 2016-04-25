@@ -196,3 +196,9 @@ def wrap_to_VI_MDP():
     wrapped = mdp.ValueIteration(transitions, rewards, discount=0.1, max_iter=10000)
     wrapped.verbose = True
     return wrapped
+
+def wrap_to_QL_MDP():
+    transitions, rewards = getTransitionAndRewardArrays()
+    wrapped = mdp.QLearning(transitions, rewards, discount=0.1)
+    wrapped.verbose = True
+    return wrapped

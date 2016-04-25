@@ -102,9 +102,9 @@ def P(state_prime, state, action):
             return 0.0
 
         if action == "CHEAT":
-            if state_prime == "CHEATING": return 0.2
-            if state_prime == "Q%dC" % question_num: return 0.4
-            if state_prime == "Q%dI" % question_num: return 0.4
+            if state_prime == "CHEATING": return 0.1
+            if state_prime == "Q%dC" % question_num: return 0.45
+            if state_prime == "Q%dI" % question_num: return 0.45
             return  0.0
 
         if action == "ATTEMPT":
@@ -182,6 +182,13 @@ def wrap_to_PI_MDP():
 def wrap_to_VI_MDP():
     transitions = build_transition_matrix()
     rewards = build_reward_matrix()
-    wrapped = mdp.ValueIteration(transitions, rewards, discount=0.6, epsilon=0.05, max_iter=10000)
+    wrapped = mdp.ValueIteration(transitions, rewards, discount=0.1, epsilon=0.05, max_iter=10000)
+    wrapped.verbose = True
+    return wrapped
+
+def wrap_to_QL_MDP():
+    transitions = build_transition_matrix()
+    rewards = build_reward_matrix()
+    wrapped = mdp.QLearning(transitions, rewards, discount=0.1)
     wrapped.verbose = True
     return wrapped
