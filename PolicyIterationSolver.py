@@ -2,6 +2,7 @@ import TestTakingMDP
 import TicTacToeMDP
 
 import time as _time
+import sys
 
 test_taking = TestTakingMDP.wrap_to_PI_MDP()
 tictactoe = TicTacToeMDP.wrap_to_PI_MDP()
@@ -25,6 +26,8 @@ def solve_test_taking():
     print("Value: %d" % val)
 
 def solve_tictactoe():
+    filename = "PI_TTT_out.txt"
+    sys.stdout = open(filename, 'w')
     tictactoe.run()
 
     print("Time: %d" % tictactoe.time)
