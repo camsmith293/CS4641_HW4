@@ -193,7 +193,7 @@ def wrap_to_PI_MDP():
 
 def wrap_to_VI_MDP():
     transitions, rewards = getTransitionAndRewardArrays()
-    wrapped = mdp.ValueIteration(transitions, rewards, discount=0.1)
+    wrapped = mdp.ValueIteration(transitions, rewards, discount=0.1, max_iter=922337203685477580)
     wrapped.verbose = True
     return wrapped
 
