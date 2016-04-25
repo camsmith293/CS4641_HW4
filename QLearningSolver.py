@@ -2,6 +2,7 @@ import TestTakingMDP
 import TicTacToeMDP
 
 import time as _time
+import sys
 
 test_taking = TestTakingMDP.wrap_to_QL_MDP()
 tictactoe = TicTacToeMDP.wrap_to_QL_MDP()
@@ -25,13 +26,17 @@ def solve_test_taking():
     print("Value: %d" % val)
 
 def solve_tictactoe():
+    filename = "VI_TTT_out.txt"
+    sys.stdout = open(filename, 'w')
     tictactoe.run()
 
     print("Time: %d" % tictactoe.time)
 
     val = 0
     for i in range(TicTacToeMDP.STATES):
-        print("State %s: %s" % (str(TicTacToeMDP.convertIndexToTuple(i)), str(tictactoe.policy(i))))
+        print("State %s: %s" % (str(TicTacToeMDP.convertIndexToTuple(i)), str(tictactoe.policy[i])))
         val += tictactoe.V[i]
 
     print("Value: %d" % val)
+
+solve_test_taking()
