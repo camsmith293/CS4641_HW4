@@ -38,5 +38,3 @@ def solve_tictactoe():
         val += tictactoe.V[i]
 
     print("Value: %d" % val)
-
-solve_test_taking()

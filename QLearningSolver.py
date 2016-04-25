@@ -26,7 +26,7 @@ def solve_test_taking():
     print("Value: %d" % val)
 
 def solve_tictactoe():
-    filename = "VI_TTT_out.txt"
+    filename = "QL_TTT_out.txt"
     sys.stdout = open(filename, 'w')
     tictactoe.run()
 
@@ -38,5 +38,3 @@ def solve_tictactoe():
         val += tictactoe.V[i]
 
     print("Value: %d" % val)
-
-solve_test_taking()
