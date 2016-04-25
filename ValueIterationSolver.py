@@ -13,6 +13,7 @@ def solve_test_taking():
 
     val = 0
     for i, state in enumerate(TestTakingMDP.STATES):
+        print("State %s: %d" % (state, test_taking.V[i]))
         val += test_taking.V[i]
 
     print("Value: %d" % val)
@@ -24,6 +25,7 @@ def solve_tictactoe():
 
     val = 0
     for i in range(TicTacToeMDP.STATES):
+        print("State %s: %d" % (str(TicTacToeMDP.convertIndexToTuple(i)), test_taking.V[i]))
         val += tictactoe.V[i]
 
     print("Value: %d" % val)
