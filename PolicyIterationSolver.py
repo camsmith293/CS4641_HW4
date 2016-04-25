@@ -36,4 +36,7 @@ def solve_tictactoe():
         # print("State %s: %d" % (str(TicTacToeMDP.convertIndexToTuple(i)), tictactoe.V[i]))
         val += tictactoe.V[i]
 
+    test_input = (1, 1, 0, 2, 0, 0, 0, 0, 0)
+    print(tictactoe.policy[TicTacToeMDP.convertIndexToTuple(test_input)])
+
     print("Value: %d" % val)
