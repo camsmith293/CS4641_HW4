@@ -31,7 +31,7 @@ def solve_tictactoe():
 
     val = 0
     for i in range(TicTacToeMDP.STATES):
-        print("State %s: %s" % (str(TicTacToeMDP.convertIndexToTuple(i)), tictactoe.policy(i)))
+        print("State %s: %s" % (str(TicTacToeMDP.convertIndexToTuple(i)), str(tictactoe.policy(i))))
         val += tictactoe.V[i]
 
     print("Value: %d" % val)
