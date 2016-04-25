@@ -2,6 +2,7 @@ import TestTakingMDP
 import TicTacToeMDP
 
 import time as _time
+import sys
 
 test_taking = TestTakingMDP.wrap_to_VI_MDP()
 tictactoe = TicTacToeMDP.wrap_to_VI_MDP()
